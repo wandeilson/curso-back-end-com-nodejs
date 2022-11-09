@@ -1,0 +1,6 @@
+#Iniciar novo projeto - "npm init"
+#Configurar script - vai no "package.json", no objeto "script" faz a seguinte config: "runHelloWorld": "node index.js"
+#Instalar algo em modo de dependencia: "npm i typescript -D"
+#Iniciar projeto typescript: "tsc --init"
+#Instalar dependencia como devDependencies: npm install --save-dev typescript
+#Initialize tsconfig.json : npx tsc --init
