@@ -3,14 +3,15 @@ import DotenvComponent from "../components/DotEnvComponent";
 
 export default class DatabaseConfig{
 
-    constructor(){
+    public static async connect(){
         const urlDatabase = DotenvComponent.API_DATABASE_URL
-        mongoose.connect(urlDatabase)
-            .then( async () => {
-                console.log("database connect successfully")       
-            })
-            .catch( (error:Error) =>{
-                console.log("database connect unsuccessfully", error.message)
-            } )
+        try {
+            await mongoose.connect(urlDatabase);
+            console.log("Database connect successfully");
+            return;
+        } catch (error) {
+            console.log("Database connect unsuccessfully", error.message);
+        }
     }
+    
 }
